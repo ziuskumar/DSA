@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a = 5 ;
+    int *ptr = &a;
+    cout << ptr <<endl;
+
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr) / sizeof(int);
+    
+    cout << arr << endl;
+    cout << *arr << endl;  //a[0]
+    cout << *(arr+1) << endl; //a[1]
+    cout << *(arr+2) << endl; //a[2]
+    
+}
+
+
+#include<iostream>
+using namespace std;
+
+
+void fumc(int arr[]){
+    arr[0] = 100;
+}
+void fumc2(int arr[]){
+    arr[0] = 1000;
+}
+
+int main(){
+    int a = 5 ;
+    int *ptr = &a;
+    cout << ptr <<endl;
+
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr) / sizeof(int);
+     
+    fumc(arr);
+    cout << arr[0] << endl;
+    fumc2(arr);
+    cout << arr[0] << endl;
+}
+
+#include<iostream>
+using namespace std;
+
+void printArr(int nums[], int n){ // nums is a pointeer not arrrat
+    for(int i=0; i<n; i++){
+        cout <<nums[i]<<",";
+    }
+    cout <<endl;
+}
